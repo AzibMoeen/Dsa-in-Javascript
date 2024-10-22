@@ -9,7 +9,6 @@ const intersect = (arr,arr2)=>{
 while(i<arr.length&&j<arr2.length){
     if(arr[i]==arr2[j]){
         arr3.push(arr[i])
-        console.log(arr3)
     i++
     j++
     }

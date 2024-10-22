@@ -6,8 +6,7 @@ function binarySearch(arr, key) {
         throw new Error("Array is null or empty");
     }
 
-    // Sort the array
-    arr.sort((a, b) => a - b);
+    
 
     let start = 0;
     let end = arr.length - 1;
