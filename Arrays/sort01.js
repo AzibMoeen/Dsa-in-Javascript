@@ -25,3 +25,30 @@ function swap(a,b,arr){
     }
     
     console.log(sort([1,0,0,1,1]))
+
+
+    function sort012(arr){
+
+
+        let a = 0
+        let b = 0
+        let c = arr.length-1
+        while(b<=c){
+            if(arr[b]==0){
+                swap(a,b,arr)
+                a++
+                b++
+            }
+            else if(arr[b]==1){
+                b++
+            }
+            else{
+                swap(c,b,arr)
+                c--
+
+            }
+        }
+        return arr
+    }
+
+    console.log(sort012([0,1,2,0,2,2,1]))
