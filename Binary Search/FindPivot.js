@@ -19,3 +19,14 @@ function Pivot(arr){
 }
 
 console.log(Pivot([4,5,6,7,8,1,2]))
+
+
+function pivo(){
+
+     let a = 0
+     let b = arr.length-1
+     
+
+
+
+}
