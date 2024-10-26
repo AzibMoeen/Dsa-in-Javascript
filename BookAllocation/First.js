@@ -1,5 +1,5 @@
 function Allocation(arr) {
-    let a = Math.max(...arr); 
+    let a = 0; 
     let b = ArraySum(arr); 
     let ans = -1;
 

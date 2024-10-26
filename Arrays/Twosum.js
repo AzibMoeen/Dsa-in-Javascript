@@ -1,13 +1,19 @@
 
 
  function twoSum(nums, target) {
-    for(let i=0;i<nums.length-1;i++){
-        for(let j =1;j<nums.length;j++)
-        if(i!==j){
+let i = 0
+let j = nums.length-1
+    while(i<=j){
         if(nums[i]+nums[j]==target){
             return [i,j]
         }
+        else if(nums[i]+nums[j]>target){
+            j--
         }
+        else{
+            i++
+        }
+        
     }
 };
 

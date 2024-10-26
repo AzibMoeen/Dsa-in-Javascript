@@ -19,10 +19,6 @@ function binarySearch(arr,start,end, key) {
     if (!arr || arr.length === 0) {
         throw new Error("Array is null or empty");
     }
-
-    
-
-
     while (start <= end) {
         let mid = Math.floor((start + end) / 2);
 

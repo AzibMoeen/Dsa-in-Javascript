@@ -4,20 +4,20 @@ function th(x) {
     let ans = -1;
 
     while (a <= b) {
-        let mid = Math.floor((a + b) / 2); // Calculate mid inside the loop
+        let mid = Math.floor((a + b) / 2); 
         let square = mid * mid;
 
         if (square === x) {
             console.log(mid);
-            return mid; // Found exact square root
+            return mid; 
         } else if (square < x) {
-            ans = mid; // Update answer to the current mid
-            a = mid + 1; // Move right
+            ans = mid; 
+            a = mid + 1; 
         } else {
-            b = mid - 1; // Move left
+            b = mid - 1; 
         }
     }
-    return ans; // Return the closest integer less than or equal to the square root
+    return ans;
 }
 
 function sqrt() {

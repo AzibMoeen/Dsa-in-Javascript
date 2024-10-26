@@ -23,11 +23,12 @@ console.log(leftAndRightMostOccurance([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6
 //Solution 2 
 
  function index(arr,key){
-    let ans = 0
+    let ans = -1
     let a = 0
-    let b= arr.length-1
-    let mid = Math.floor((a+b)/2)
+    let b = arr.length-1
+  
     while(a<=b){
+        let mid = Math.floor((a+b)/2)
         if(arr[mid]==key){
             ans = mid
             a=mid+1
@@ -38,10 +39,10 @@ console.log(leftAndRightMostOccurance([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6
         else{
             b=mid-1
         }
-        mid=Math.floor((a+b)/2)
+
     }
      return ans
 
 
  }
- console.log(index([0,3,3,6,3,5,3,5],5))
+ console.log(index([0,3,3,5,5,6,6],5))
