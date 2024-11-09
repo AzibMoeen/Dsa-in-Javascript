@@ -23,7 +23,7 @@ function binarySearch(arr, key) {
         }
     }
 
-    return -1; // Key not found
+    return -1; 
 }
 
 console.log(binarySearch(arr, key))

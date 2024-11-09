@@ -40,7 +40,6 @@ const intersect2 = (arr,arr2)=>{
     })
     return arr3
     }
-
     console.log(intersect2(arr,arr2))
 
     //approach 3
