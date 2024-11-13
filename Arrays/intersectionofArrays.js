@@ -42,7 +42,7 @@ const intersect2 = (arr,arr2)=>{
     }
     console.log(intersect2(arr,arr2))
 
-    //approach 3
+    
 let arr5 = []
 const intersect3 = (arr,arr2)=>{
     for(let i=0;i<arr.length;i++){

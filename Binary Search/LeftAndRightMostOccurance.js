@@ -46,3 +46,20 @@ console.log(leftAndRightMostOccurance([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6
 
  }
  console.log(index([0,3,3,5,5,6,6],5))
+
+ //Using for loop
+
+    function index(arr,key){
+        let ans = -1
+        let a = 0
+        let b = arr.length-1
+      
+        for(let i = 0;i<arr.length;i++){
+            if(arr[i]==key){
+                ans = i
+            }
+        }
+         return ans
+      
+      
+     }

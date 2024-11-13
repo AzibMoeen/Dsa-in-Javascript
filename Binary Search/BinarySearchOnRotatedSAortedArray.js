@@ -37,7 +37,7 @@ let arr = [4,5,6,7,8,1,2]
 let pivot = find(arr)
 
 let k = 1
-if(k>=arr[pivot]){
+if(k>arr[pivot]&&k<arr[arr.length-1]){
     console.log(binarySearch(arr,pivot,arr.length-1,k))
 }
 else{
