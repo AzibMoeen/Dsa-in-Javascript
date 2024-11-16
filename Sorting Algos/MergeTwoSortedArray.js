@@ -1,10 +1,6 @@
 
 
 
-/**
- * Merges two sorted arrays into one sorted array in non-decreasing order.
- * @returns {number[]} The merged sorted array.
- */
 const merge = () => {
     let arr1 = [0,0,0,0,0,1, 3, 5, 7, 9];
     let arr2 = [2, 4, 6, 8, 10,11];

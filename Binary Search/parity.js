@@ -22,7 +22,26 @@ function parity(){
     console.log(temp) 
 }
 //first 2 even than odd
- function parity2(){
-     
+ /**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var sortArrayByParity = function(nums) {
+    
+    let even = 0
+    for(let i = 0;i<nums.length;i++){
+       if(nums[i]%2==0){
 
- }
+           swap(i,even,nums)
+           even++
+       }
+    }
+    return nums
+};
+
+function swap(i,even,arr){
+[arr[i],arr[even]]=[arr[even],arr[i]]
+
+}
+
+console.log(sortArrayByParity([1,2,3,4,5,6,7,8,9])) //[2,1,4,3,6,5,8,7,9]

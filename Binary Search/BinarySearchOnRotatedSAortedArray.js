@@ -9,7 +9,7 @@ function find(arr){
             a = mid+1
         }
         else{
-            b= mid
+            b = mid
         }
         mid = Math.floor((a+b)/2)
     }
@@ -31,7 +31,7 @@ function binarySearch(arr,start,end, key) {
         }
     }
 
-    return -1; // Key not found
+    return -1; 
 }
 let arr = [4,5,6,7,8,1,2]
 let pivot = find(arr)
