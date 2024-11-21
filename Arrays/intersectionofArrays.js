@@ -61,3 +61,20 @@ const intersect3 = (arr,arr2)=>{
 console.log(intersect3(arr,arr2))
 
 
+//approach 4
+
+let arr6 = [];
+
+const intersect4 = (arr, arr2) => {
+    const set = new Set(arr);
+    arr2.forEach(item => {
+        if (set.has(item)) {
+            arr6.push(item);
+            set.delete(item);
+        }
+    });
+    return arr6;
+}
+
+console.log(intersect4(arr, arr2));
+
