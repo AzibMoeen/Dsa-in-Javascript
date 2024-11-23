@@ -1,7 +1,4 @@
 
-
-//
-
 let string = "hello"
 
 function reverseString(string) {

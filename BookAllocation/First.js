@@ -9,14 +9,12 @@ function Allocation(arr) {
         let sum = 0;
 
         for (let i = 0; i < arr.length; i++) {
-            sum += arr[i];
-
+        sum += arr[i];
             if (sum > mid) {
                 students++;
-                sum = arr[i]; 
+               sum = arr[i]; 
             }
         }
-
         if (students <= 2) {
             ans = mid; 
             b = mid - 1; 
