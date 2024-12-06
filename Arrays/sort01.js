@@ -110,7 +110,7 @@ function sort(arr){
             i++
            }
            else if(arr[j]==1){
-               j--
+            j--
            }
            else{
             [arr[i],arr[j]]= [arr[j],arr[i]]

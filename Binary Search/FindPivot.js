@@ -5,12 +5,12 @@ function Pivot(arr){
      
      let a = 0
      let b = arr.length-1
+     let  ans = -1
      let mid = Math.floor((a+b)/2)
      while(a<b){
         if(arr[mid]>=arr[0]){
             a = mid+1
         }else{
-
             b = mid
         }
         mid = Math.floor((a+b)/2)

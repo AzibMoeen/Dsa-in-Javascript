@@ -9,6 +9,14 @@ const merge = () => {
     let b = arr2.length - 1;
     let c = a + b + 1;
     while (a >= 0 || b >= 0) {
+        if (a < 0) {
+            arr1[c--] = arr2[b--];
+            continue;
+        }
+        if (b < 0) {
+            arr1[c--] = arr1[a--];
+            continue;
+        }
         if (arr1[a] > arr2[b]) {
             arr1[c] = arr1[a];
             a--;
