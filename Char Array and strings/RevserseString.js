@@ -1,4 +1,3 @@
-
 let string = "hello"
 
 function reverseString(string) {
@@ -18,3 +17,4 @@ function swap(a, b, arr) {
 }
 
 reverseString(string);
+

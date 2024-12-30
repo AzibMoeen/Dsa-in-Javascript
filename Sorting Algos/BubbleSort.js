@@ -15,3 +15,4 @@ for (let index = 0; index < array.length; index++) {
 return array
  }
 console.log(sort([9,0,8,0,4,5,6,7]))
+

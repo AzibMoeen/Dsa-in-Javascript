@@ -3,6 +3,7 @@
  function twoSum(nums, target) {
 let i = 0
 let j = nums.length-1
+nums.sort((a,b)=>a-b)
     while(i<=j){
         if(nums[i]+nums[j]==target){
             return [i,j]
@@ -13,8 +14,7 @@ let j = nums.length-1
         else{
             i++
         }
-        
     }
 };
 
-console.log(twoSum([2,7,11,15],9)) // [0,1]
+console.log(twoSum([2,5,35,3,65],8)) // [0,1]
