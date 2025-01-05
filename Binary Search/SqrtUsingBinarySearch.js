@@ -8,9 +8,7 @@ function th(x) {
     while (a <= b) {
         let mid = Math.floor((a + b) / 2); 
         let square = mid * mid;
-
         if (square === x) {
-            console.log(mid);
             return mid; 
         } else if (square < x) {
             ans = mid; 
@@ -23,7 +21,10 @@ function th(x) {
 }
 
 function sqrt() {
-    console.log(th(1)); // Example call
+    console.log(th(100)); // Example call
 }
 
 sqrt();
+
+
+

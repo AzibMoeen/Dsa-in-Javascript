@@ -110,7 +110,7 @@ function sort(arr){
             j--
            }
            else{
-            [arr[i],arr[j]]= [arr[j],arr[i]]
+            [arr[i],arr[j]] = [arr[j],arr[i]]
            }
        }
        return arr
@@ -124,13 +124,13 @@ let c = arr.length-1
 
 while(b<=c){
    if(arr[b]==0){
-    [arr[b],arr[a]]= [arr[a],arr[b]]
+    [arr[b],arr[a]] = [arr[a],arr[b]]
       b++
       a++
    }
    else if(arr[b]==2){
     [arr[b],arr[c]]= [arr[c],arr[b]]
-    c--
+     c--
    }
    else{
     b++
