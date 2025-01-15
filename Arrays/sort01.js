@@ -117,26 +117,26 @@ function sort(arr){
 }
 console.log(sort([1,0,0,1,1]))
 
-function sort012(arr){
-let a = 0
-let b = 0
-let c = arr.length-1
+// function sort012(arr){
+// let a = 0
+// let b = 0
+// let c = arr.length-1
 
-while(b<=c){
-   if(arr[b]==0){
-    [arr[b],arr[a]] = [arr[a],arr[b]]
-      b++
-      a++
-   }
-   else if(arr[b]==2){
-    [arr[b],arr[c]]= [arr[c],arr[b]]
-     c--
-   }
-   else{
-    b++
-   }
-}
-return arr
-}
+// while(b<=c){
+//    if(arr[b]==0){
+//     [arr[b],arr[a]] = [arr[a],arr[b]]
+//       b++
+//       a++
+//    }
+//    else if(arr[b]==2){
+//     [arr[b],arr[c]]= [arr[c],arr[b]]
+//      c--
+//    }
+//    else{
+//     b++
+//    }
+// }
+// return arr
+// }
 
-console.log(sort012([1,2,0,1,0,2,0,2]),"God Job!!!")
+// console.log(sort012([1,2,0,1,0,2,0,2]),"God Job!!!")
