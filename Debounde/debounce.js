@@ -10,14 +10,12 @@ var debounce = function(fn, t) {
         fn(...outerArgs)
         id = null
     }
-   
     return function(...args) {
        if(id!==null){
            clearTimeout(id)
        }  
          outerArgs = args
          id = setTimeout(execute,t)
-        
     }
 };
 

@@ -5,9 +5,6 @@ function binarySearch(arr, key) {
     if (!arr || arr.length === 0) {
         throw new Error("Array is null or empty");
     }
-
-    
-
     let start = 0;
     let end = arr.length - 1;
 

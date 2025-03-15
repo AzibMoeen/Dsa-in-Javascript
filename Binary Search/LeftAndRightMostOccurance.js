@@ -28,7 +28,7 @@ console.log(leftAndRightMostOccurance([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6
     let b = arr.length-1
   
     while(a<=b){
-        let mid = Math.floor((a+b)/2)
+        let zz= Math.floor((a+b)/2)
         if(arr[mid]==key){
             ans = mid
             a=mid+1

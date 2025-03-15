@@ -18,3 +18,21 @@ var maxProfit = function(prices) {
     }
     return max
 };
+
+
+
+function maxProfit(prices){
+let minPrice = 10000
+let max = 0
+for(let price of prices){
+    if(price<minPrice)
+    {
+        minPrice = price
+    }else{
+        let potentialProfit = price-minPrice
+        if(potentialProfit>max)
+            max = potentialProfit
+    }
+}
+return max
+}

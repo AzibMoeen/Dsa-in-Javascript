@@ -67,7 +67,7 @@ class Deque {
       } else {
         this.rear = (this.rear - 1 + this.maxSize) % this.maxSize;
       }
-      return value;
+      return value;   
     }
   
     getFront() {

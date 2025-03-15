@@ -18,3 +18,5 @@ nums.sort((a,b)=>a-b)
 };
 
 console.log(twoSum([2,5,35,3,65],8)) // [0,1]
+
+

@@ -35,13 +35,12 @@
 // }
  
 function swap(arr){
-     
-    for (let i = 0; i < arr.length; i+=2) {
-        if(i+1<=arr.length){
-            [arr[i],arr[i+1]]=[arr[i+1],arr[i]]
-        }
-    }
-    return arr
+   for(let i = 0 ; i<arr.length;i+=2){
+       if(i+1<arr.length){
+           [arr[i],arr[i+1]]=[arr[i+1],arr[i]]
+       }
+   }    
+   return arr
 }
 console.log(swap([1,2,3,4,5,6,7,8,9,10]))
 
