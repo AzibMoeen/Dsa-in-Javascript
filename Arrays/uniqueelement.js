@@ -5,7 +5,10 @@ let arr = [2,43,43,2,7,33,33]
 let findUniqueElement = (arr) => {
 let counter = {}
 for(let i=0;i<arr.length-1;i++){
-    if(counter[arr[i]]){counter[arr[i]]++}
+    if(counter[arr[i]])
+        {
+            counter[arr[i]]++
+        }
     else{
         counter[arr[i]]=1
     }
@@ -44,3 +47,21 @@ console.log(findUniqueElement2(arr));
 
 
 
+const findElement = (array) => {
+
+    let obj = {}
+    for(let i = 0;i<array.length;i++){
+        if(obj[array[i]]){
+            obj[array[i]]++
+        }
+        else
+        {
+            obj[array[i]] = 1
+        }
+    }
+ for(let key of obj){
+    if(obj[key]===1){
+      return key
+    }
+ }
+}

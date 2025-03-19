@@ -16,19 +16,17 @@ class Queue {
     }
   
     // Add an element to the back of the queue
-    enqueue(element) {
-      if (this.isFull()) {
-        console.log("Queue is full");
-        return;
-      }
-      if (this.isEmpty()) {
-        this.front = 0; 
-      }
-      this.rear++; 
-      this.queue[this.rear] = element;
-      console.log(`${element} enqueued`);
+   enqueue(element){
+    if(this.isFull()){
+        console.log("queue is full");
+        return ;
     }
-  
+    if(this.isEmpty()){
+        this.front = 0;
+    }
+    this.rear++;
+    this.queue[this.rear] = element;  
+   }
     // Remove an element from the front of the queue
     dequeue() {
       if (this.isEmpty()) {
