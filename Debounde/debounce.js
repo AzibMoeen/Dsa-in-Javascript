@@ -1,31 +1,20 @@
-/**
- * @param {Function} fn
- * @param {number} t 
- * @return {Function}
- */
-var debounce = function(fn, t) {
-     let id = null
-     let outerArgs = []
-    function execute(){
-        fn(...outerArgs)
-        id = null
+function debounce(func,delay){
+    let timer;
+    return function(...args){
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            func.apply(this,args);
+        },delay);
     }
-    return function(...args) {
-       if(id!==null){
-           clearTimeout(id)
-       }  
-         outerArgs = args
-         id = setTimeout(execute,t)
+} 
+
+function throttle(func,delay){
+    let throttle = false;
+    return function(...args){
+        if(!throttle){
+            func.apply(this,args);
+            throttle = true;
+            setTimeout(()=>(throttle= false),delay);
+        }
     }
-};
-
-
-  const log = debounce(console.log, 100);
-  log('Hello'); // cancelled
-  log('Hello'); // cancelled
-  log('Hello'); // Logged at t=100ms
- 
-
-  console.log("hello world","hello world",10)
- 
-  
+}

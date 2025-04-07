@@ -7,7 +7,6 @@ function sort(array){
               if(array[index]>array[j]){
                 index = j
               } 
-
         }
         swap(index,i,array)
         
