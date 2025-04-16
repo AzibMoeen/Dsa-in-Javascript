@@ -1,38 +1,38 @@
 
-/**
- * @param {number[]} temperatures
- * @return {number[]}
- */
-var dailyTemperatures = function(temperatures) {
-    let n = temperatures.length
-    let answer = new Array(n).fill(0)
+// /**
+//  * @param {number[]} temperatures
+//  * @return {number[]}
+//  */
+// var dailyTemperatures = function(temperatures) {
+//     let n = temperatures.length
+//     let answer = new Array(n).fill(0)
 
-    let stack = []
+//     let stack = []
 
-    for(let i = 0;i<n;i++){
+//     for(let i = 0;i<n;i++){
 
-        while(stack.length>0&&temperatures[stack[stack.length-1]]<temperatures[i]){
-        const prevIndex = stack.pop()
-        const answe = i - prevIndex
-        answer[prevIndex] = answe
-    }
+//         while(stack.length>0&&temperatures[stack[stack.length-1]]<temperatures[i]){
+//         const prevIndex = stack.pop()
+//         const answe = i - prevIndex
+//         answer[prevIndex] = answe
+//     }
 
-    stack.push(i)
-}
-return answer
-}
-// const time = new Date().getTime();
-const temperatures1 = [73, 74, 75, 71, 69, 72, 76, 73];
-console.log(dailyTemperatures(temperatures1)); 
+//     stack.push(i)
+// }
+// return answer
+// }
+// // const time = new Date().getTime();
+// const temperatures1 = [73, 74, 75, 71, 69, 72, 76, 73];
+// console.log(dailyTemperatures(temperatures1)); 
     
-const temperatures2 = [30, 40, 50, 60];
-console.log(dailyTemperatures(temperatures2));
+// const temperatures2 = [30, 40, 50, 60];
+// console.log(dailyTemperatures(temperatures2));
 
-const temperatures3 = [30, 60, 90];
-console.log(dailyTemperatures(temperatures3)); 
-const time2 = new Date().getTime();
+// const temperatures3 = [30, 60, 90];
+// console.log(dailyTemperatures(temperatures3)); 
+// const time2 = new Date().getTime();
 
-// const timeTaken = time2 - time;
+// // const timeTaken = time2 - time;
 // console.log('Time taken is: ', timeTaken);
 
 
@@ -106,3 +106,19 @@ const time2 = new Date().getTime();
 
 
 
+
+
+const removeDuplicate = (arr) => {
+let j = 0
+for(let i = 0;i<arr.length;i++){
+    if(arr[i]!==arr[j]){
+        j++
+        arr[j] = arr[i]
+    }
+
+    
+}
+return arr.slice(0, j + 1);
+}
+
+console.log(removeDuplicate([1,2,3,4,5,6,6,8,8,8,8,8,6,7,8,9,10]))

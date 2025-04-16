@@ -12,7 +12,7 @@ class Node {
       this.tail = null;
     }
   
-    // Add to end
+ 
     append(data) {
       const node = new Node(data);
       if (!this.head) {
@@ -97,3 +97,26 @@ class Node {
     list.displayForward(); 
     
     list.displayBackward();
+
+
+
+
+
+    function temp(array){
+    
+      let length = array.length
+      let result = new Array(length).fill(0)
+
+      let stack = []
+      for(let i = 0 ;i<length;i++){
+      while(stack.length&&array[i]>array[stack[stack.length-1]]){
+        let index = stack.pop()
+        result[index] = i - index
+      }
+      stack.push(i)
+    }
+    return result
+    }
+
+
+    console.log(temp([73, 74, 75, 71, 69, 72, 76, 73]))

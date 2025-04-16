@@ -129,7 +129,7 @@ while(b<=c){
       a++
    }
    else if(arr[b]==2){
-    [arr[b],arr[c]]= [arr[c],arr[b]]
+    [arr[b],arr[c]] = [arr[c],arr[b]]
      c--
    }
    else{
@@ -140,3 +140,4 @@ return arr
 }
 
 console.log(sort012([1,2,0,1,0,2,0,2]),"Good Job!!!")
+

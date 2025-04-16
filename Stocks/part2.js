@@ -11,3 +11,5 @@ var maxProfit = function(prices) {
     }
    return totalProfit 
 };
+
+console.log(maxProfit([10,20,30,12,50]))

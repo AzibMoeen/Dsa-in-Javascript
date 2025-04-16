@@ -36,3 +36,5 @@ for(let price of prices){
 }
 return max
 }
+
+console.log(maxProfit([10,20,300,600,700]))

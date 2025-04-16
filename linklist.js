@@ -11,24 +11,41 @@ class LinkedList {
     this.tail = null;
   }
 
-  prepend(data) {
+  prepend(data){
     const node = new Node(data);
+    if(!this.head) {
+      this.head = this.tail = node;
+      return;
+    }
     node.next = this.head;
     this.head = node;
-    if (!this.tail) {
-      this.tail = node;
-    }
   }
 
   append(data) {
     const node = new Node(data);
-    if (!this.tail) {
+    if(!this.head) {
       this.head = this.tail = node;
       return;
     }
     this.tail.next = node;
     this.tail = node;
   }
+   
+  reverse() {
+     
+    let prev = null
+    let current = this.head;
+
+    while(current){
+      let next = current.next 
+      current.next = prev
+      prev = current
+      current = next
+    }
+    this.head = prev
+    this.tail = this.head
+  }
+
 
   deleteHead() {
     if (!this.head) return;
@@ -52,6 +69,18 @@ class LinkedList {
     this.tail = current;
   }
 
+  FindMid(){
+    let mid = this.head
+    let end = this.head
+    while(end){
+       end = end.next
+       end = end.next
+       mid = mid.next
+    }
+    console.log("mid",mid)
+    return mid
+  }
+
   display() {
     let current = this.head;
     let result = "";
@@ -63,15 +92,34 @@ class LinkedList {
 }
 
 
-const list = new LinkedList();
-list.append(10);
-list.append(20);
-list.prepend(5);
-list.append(28929);
-list.prepend(8229847)
-list.display();      
+const list1 = new LinkedList();
+const list2 = new LinkedList();
 
-list.deleteHead();
-list.display();      
-list.deleteTail();
-list.display();       
+function Merge(list1,list2){
+    const mergedList = new LinkedList()
+
+    let current1 = list1.head
+    let current2 = list2.head
+
+    while(current1 && current2){
+        if(current1.data < current2.data){
+            mergedList.append(current1.data)
+            current1 = current1.next
+        } else {
+            mergedList.append(current2.data)
+            current2 = current2.next
+        }
+    }
+
+    while(current1){
+        mergedList.append(current1.data)
+        current1 = current1.next
+    }
+
+    while(current2){
+        mergedList.append(current2.data)
+        current2 = current2.next
+    }
+
+    return mergedList;
+}

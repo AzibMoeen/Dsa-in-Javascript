@@ -1,11 +1,9 @@
 // Place array as first occurrence is even, second is odd, and in same sequence onward
 
 function parity(){
-    // Initialize the original array
     let array = [1,2,3,4,5,6,7,8,9]
-    // Create a temporary array of the same length
     let temp = new Array(array.length)
-    // Get the length of the array
+    // Get  length of the array
     let n = array.length
     // Initialize even index to 0 (even positions)
     let evenIndex = 0
