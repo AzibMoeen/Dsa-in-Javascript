@@ -25,7 +25,22 @@ class CircularLinkedList {
             newNode.next = this.head;
         }
    }
-
+   insertAtBeginning(data) {
+    const newNode = new Node(data);
+   if(!this.head){
+    this.head = newNode;
+    newNode.next = this.head;
+   }
+   else{
+    let current = this.head;
+    while(current.next!==this.head){
+        current = current.next
+    }
+    newNode.next = this.head;
+    current.next = newNode;
+    this.head = newNode;
+   }
+    }
     Delete(data) {
         if (!this.head) return;
     
@@ -61,6 +76,100 @@ class CircularLinkedList {
         }
         return; 
     } 
+
+    DeleteAtBeginning(){
+        if(!this.head) return;
+        if(this.head.next === this.head){
+            this.head = null
+            return;
+        }
+        let current = this.head;
+        while(current.next !== this.head){
+            current = current.next;
+        }
+        current.next = this.head.next;
+        this.head = this.head.next;
+    }
+
+    DeleteAtEnd(){
+        if(!this.head)  return;
+        if(this.head.next === this.head){
+            this.head = null
+            return;
+        }
+        let current = this.head;
+        while(current.next.next !== this.head){
+            current = current.next;
+        }
+      
+
+
+        current.next = this.head;
+    }
+
+    checkCircular(){
+        let slow = this.head
+        let fast = this.head
+
+        while(fast && fast.next){
+            slow = slow.next
+            fast = fast.next.next
+            if(slow === fast){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    Sort(){
+        if(!this.head  || this.head.next === this.head) return;
+
+        let end = null;
+        let swapped 
+
+        do{
+            swapped = false;
+            let current = this.head;
+            while(current.next !== end && current.next !== this.head){
+                if(current.data > current.next.data){
+                    let temp = current.data;
+                    current.data = current.next.data;
+                    current.next.data = temp;
+                    swapped = true;
+                }
+                current = current.next;
+            }
+            end = current;
+                    
+        }while(swapped);
+}
+
+InsertinSortedOrder(data){
+    const newNode = new Node(data);
+    if(!this.head){
+        this.head = newNode;
+        newNode.next = this.head;
+        return;
+    }
+    let current = this.head;
+
+    if(current.data > data){
+        while(current.next !== this.head){
+            current = current.next;
+        }
+        current.next = newNode;
+        newNode.next = this.head;
+        this.head = newNode;
+        return;
+    }
+    while(current.next !== this.head && current.next.data < data){
+        current = current.next;
+    }
+    newNode.next = current.next;
+    current.next = newNode;
+    return;
+}
+    
     display() {
         if (!this.head) {
             console.log("List is empty");
@@ -77,6 +186,29 @@ class CircularLinkedList {
 
         console.log("Circular List:", result.join(" -> "));
     }
+
+    CheckTwoIdentical(list1, list2){
+
+        if(list1 === null && list2 === null){
+            return true;
+        }
+        if(list1 === null || list2 === null){
+            return false;
+        }
+       let current1 = list1.head;
+       let current2 = list2.head;
+       do{
+        if(current1.data !== current2.data) return false
+        current1 = current1.next;
+        current2 = current2.next;
+        } while(current1 !== list1.head && current2!== list2.head)
+       
+        while(current1 !== list1.head || current2 !== list2.head) return false;
+
+        return true;
+    }
+   
+
 }
 
 // Example usage:
