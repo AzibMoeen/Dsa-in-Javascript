@@ -17,7 +17,7 @@
         this.head = this.tail = node;
         return;
       }
-      .nexnodet = this.head;
+      this.head = this.head;
       this.head = node;
     }
 
@@ -159,6 +159,33 @@
     }
     console.log("Is Palindrome:", result);
     return true
+    }
+
+    Sort01(){
+      let current = this.head
+      let zeroCount = 0
+      let oneCount = 0
+
+      while(current){
+        if(current.data === 0){
+          zeroCount++
+        }else{
+          oneCount++
+        }
+      }
+
+
+      while(zeroCount >0 ){
+        current.data = 0
+        zeroCount--
+        current = current.next
+      }
+
+      while(oneCount > 0){
+        current.data = 1
+        oneCount--
+        current = current.next
+      }
     }
 
     
