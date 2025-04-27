@@ -18,10 +18,9 @@
         for(let i = 0;i<array.length;i++){
             if(i+1<array.length&&obj[array[i]]<obj[array[i+1]]){
                 result = result - obj[array[i]]
-            }
-            else{
+            }         else{
                 result = result + obj[array[i]]
             }
         }
    return result
-    };
+};

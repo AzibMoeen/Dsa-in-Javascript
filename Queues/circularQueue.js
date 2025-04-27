@@ -11,7 +11,6 @@ isEmpty(){
      return this.front == -1
 }
 isFull(){
-
     return (this.rear+1)%this.Max_Length === this.front
 }
 Queue(element){

@@ -1,7 +1,7 @@
 
 /**
- * @param {string} s
- * @param {number} k
+ * @param {string} 
+ * @param {number} 
  * @return {string}
  */
 var reverseStr = function(s, k) {

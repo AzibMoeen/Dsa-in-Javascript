@@ -1,13 +1,13 @@
 function mergeSort(array) {
     if (array.length <= 1) {
-        return array; // Base case: an array with 1 or 0 elements is already sorted
+        return array; 
     }
 
     const mid = Math.floor(array.length / 2);
     const left = array.slice(0, mid);
     const right = array.slice(mid);
 
-    return merge(mergeSort(left), mergeSort(right)); // Recursively merge the sorted halves
+    return merge(mergeSort(left), mergeSort(right)); 
 }
 function merge(left, right) {
     let array = [];
@@ -34,7 +34,6 @@ function merge(left, right) {
     return array;
 }
 
-// Example Usage
 const unsortedArray = [38, 27, 43, 3, 9, 82, 10];
 const sortedArray = mergeSort(unsortedArray);
 

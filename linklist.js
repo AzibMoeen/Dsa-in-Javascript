@@ -175,7 +175,7 @@
       }
 
 
-      while(zeroCount >0 ){
+      while(zeroCount>0 ){
         current.data = 0
         zeroCount--
         current = current.next

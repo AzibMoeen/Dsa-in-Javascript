@@ -43,11 +43,9 @@ class CircularLinkedList {
     }
     Delete(data) {
         if (!this.head) return;
-    
         let current = this.head;
         let prev = null;
     
-
         if(current.data === data) {
 
             while(current.next !== this.head){

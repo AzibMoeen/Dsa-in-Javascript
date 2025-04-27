@@ -10,7 +10,6 @@ class Queue {
       return this.front === -1 && this.rear === -1;
     }
   
-    // Check if the queue is full
     isFull() {
       return this.rear === this.Max_Length - 1;
     }

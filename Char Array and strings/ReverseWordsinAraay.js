@@ -19,4 +19,4 @@ var reverseWords = function(s) {
 };
 
 
-console.log(reverseWords("Let's take LeetCode contest")) // "s'teL ekat edoCteeL tsetnoc"
+console.log(reverseWords("Let's take LeetCode contest")) 
